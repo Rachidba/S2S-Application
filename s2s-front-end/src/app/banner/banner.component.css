@@ -1,0 +1,33 @@
+ .container
+ {
+     margin-top: 7%;
+ }
+
+.banner
+{
+    background-color: rgb(122, 175, 22);
+
+}
+
+.slogon
+{
+    font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
+    color: black;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+    font-style: italic;
+}
+
+h2{
+    font: 400 55px/0.8 'Cookie', Helvetica, sans-serif;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+    font-style: italic;
+    color: #fff;
+}
+.name
+{
+    font: 400 30px/0.8 'Cookie', Helvetica, sans-serif;
+    color: black;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+    font-style: italic;
+}
+

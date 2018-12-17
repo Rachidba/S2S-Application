@@ -1,0 +1,19 @@
+<div class="container">
+<h2> les meilleurs cours </h2>
+<section class="details-card">
+  <div class="container">
+      
+        <div *ngFor="let array of course">
+            <div class="row">
+                <div *ngFor="let obj of array ">
+                  <app-card-cours [obj]="obj"></app-card-cours>
+                  </div>
+        </div>
+        
+       
+      </div>
+     
+  </div>
+</section>
+</div>
+ 

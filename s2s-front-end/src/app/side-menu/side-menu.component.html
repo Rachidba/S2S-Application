@@ -1,0 +1,44 @@
+
+<div class="nav-side-menu">
+    <div class="brand">MENU TUTEUR</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                  </a>
+                </li>
+                <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                    <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+                    GESTION DES COURS <span class="arrow"></span>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li><a [routerLink]="['/espace-tuteur/creation-cours']">Ajouter un cours</a></li>
+                    <li><a [routerLink]="['/espace-tuteur/liste-cours']">Liste des cours</a></li>
+                </ul>
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                <i class="fa fa-globe fa-lg"></i> GESTION DES SEANCES <span class="arrow"></span>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <li>New Service 1</li>
+                  <li>New Service 2</li>
+                  <li>New Service 3</li>
+                </ul>
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>EMPLOI DU TEMPS <span class="arrow"></span>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>New New 1</li>
+                  <li>New New 2</li>
+                  <li>New New 3</li>
+                </ul>
+                 <li>
+                  <i class="fa fa-user fa-lg"></i> VOTRE PROFILE
+                  </li>
+                 <li>
+                  <i class="fa fa-users fa-lg"></i> LES ETUDIANTS    
+                </li>
+            </ul>
+     </div>
+</div>

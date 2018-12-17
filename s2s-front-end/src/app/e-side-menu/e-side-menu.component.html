@@ -1,0 +1,29 @@
+
+<div class="nav-side-menu">
+    <div class="brand">MENU Etudiant</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                  </a>
+                </li>
+                <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                    <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+                    Les séances reservées <span class="arrow"></span>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li><a [routerLink]="['/espace-etudiant/creation-cours']">Liste des séances reservées</a></li>
+                    <li><a >******</a></li>
+                </ul>
+               
+                 <li>
+                  <i class="fa fa-user fa-lg"></i> VOTRE PROFILE
+                  </li>
+                 <li>
+                  <i class="fa fa-users fa-lg"></i> LES TUTEURS  
+                </li>
+            </ul>
+     </div>
+</div>

@@ -1,0 +1,102 @@
+<div class="container">
+
+    <legend> 
+            <h2 style="text-align: center">    
+           <small><i class="glyphicon glyphicon-list "> </i></small>
+             Liste des séances
+        </h2>
+       </legend>
+        <div class="panel panel-default">
+          <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <th>Date séance</th>
+                    <th>Emplacement</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Etat</th>
+
+                </tr>
+                <tr *ngFor="let seance of seancess">
+                    <td>
+                      <span class="glyphicon glyphicon-file"></span>
+                      {{seance.dateSeance}}
+                    </td>
+                    <td>
+                          {{seance.emplacement}}
+                    </td>
+                    <td>
+                            {{seance.description}}
+                    </td>
+                    <td>
+             <div   *ngIf="seance.type == 1; else elsecondition">
+                        <p >(Individuel)</p>
+                        </div>
+                     
+                        <ng-template #elsecondition>
+                            
+                                <p >(groupe)</p>
+
+                        </ng-template>  
+                          
+                    </td>
+                    <td>
+                            <div   *ngIf="seance.etat == 1; else elseEtat">
+                                    <button class="btn btn-xs btn-success" >validée</button>
+                                    </div>
+                                 
+                                    <ng-template #elseEtat>
+
+                                            <button class="btn btn-xs btn-danger" >expirée</button>
+                                    </ng-template>
+                    
+                        
+                        
+                    </td>
+                    <td>
+
+                                <button type="button" class="btn-xs btn-info" data-toggle="modal" [attr.data-target]="'#' + seance.idSeance"><i class="fa fa-star-o"></i> Noté </button>     
+                                                
+                                <div class="modal fade cours_view"  [attr.id]="toString(seance.idSeance)">
+                                        <div class="container">
+
+                                     
+                                        <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+                                                        <h3 class="modal-title">Score</h3>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                        <div class="row">
+                                                        
+                                                                <div class="rating">
+                                                                <star-rating  size="large" speed="slow" [showHalfStars]="true"  [starType]="'svg'" [rating]="1"></star-rating>
+                                                
+                                                                </div>
+                                                                <p>Commentaire </p>
+                                                                <textarea class="form-control" rows="8" cols="50" name="Message" placeholder="Message..."></textarea>
+                                                                <button class="btn btn-lg btn-primary btn-block" 
+                                                                style="background-color: rgb(122, 175, 22);border-color: rgb(122, 175, 22) " type="submit">
+                                                                        <b>Envoyer</b> </button>
+                                                        
+                                                                
+                                                                
+                                        
+                                                        </div>
+                                                        <br/>
+                                                </div>  
+                                                        
+                                                </div>
+                                        </div>
+                                        </div>
+                                        </div>
+        
+                        </td>
+               
+                  </tr>
+                  
+            </tbody>
+          </table>
+        </div>
+</div>
